@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tema Global: Neon Cyberpunk */
+:root {
+  --bg-cyber-dark: #08080a;
+  --bg-cyber-panel: #0e0e14;
+  --text-cyber-base: #e0e0e0;
+  --neon-cyan: #00e5ff;
+  --neon-magenta: #ff00de;
+  --border-cyber-dark: #1f1f2e;
+}
+
+html,
+body {
+  background-color: #08080a !important;
+  color: #e0e0e0 !important;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(0, 229, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(255, 0, 222, 0.05) 0%, transparent 40%);
+}
+
+/* Estilo Cyberpunk para la barra de navegación global */
+.navbar {
+  background-color: rgba(14, 14, 20, 0.9);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
+}
+
+.navbar-brand {
+  color: #00e5ff !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 12px rgba(0, 229, 255, 0.7);
+}
+
+.nav-link {
+  color: #e0e0e0 !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff00de !important;
+  text-shadow:
+    0 0 6px #ff00de,
+    0 0 14px rgba(255, 0, 222, 0.8);
+}

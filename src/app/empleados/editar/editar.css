@@ -1,0 +1,184 @@
+/* Panel contenedor principal con borde oscuro e iluminación neón en :hover */
+.container {
+  background-color: rgba(14, 14, 20, 0.85);
+  border: 1px solid #1f1f2e;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.3s ease;
+}
+
+.container:hover {
+  border-color: #00e5ff;
+  box-shadow:
+    0 0 12px rgba(0, 229, 255, 0.6),
+    0 0 28px rgba(0, 229, 255, 0.35),
+    0 0 45px rgba(255, 0, 222, 0.25),
+    inset 0 0 15px rgba(0, 229, 255, 0.12);
+}
+
+/* Título con efecto de tubo de luz de neón */
+h2 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 4px #ffffff,
+    0 0 10px #ff00de,
+    0 0 22px #ff00de,
+    0 0 40px rgba(255, 0, 222, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+/* Iconos heredan el brillo neón */
+h2 i,
+.form-label i,
+.btn i,
+.alert i,
+.neon-icon {
+  color: inherit;
+  text-shadow: inherit;
+  filter: drop-shadow(0 0 6px currentColor);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.form-label {
+  color: #00e5ff;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
+}
+
+.form-text {
+  color: rgba(224, 224, 224, 0.6);
+}
+
+/* Inputs (.form-control) con destello neón en :hover y :focus */
+.form-control {
+  background-color: #09090d !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #2a2a3d;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(224, 224, 224, 0.35);
+}
+
+.form-control:hover:not(:disabled) {
+  border-color: #00e5ff;
+  box-shadow:
+    0 0 8px rgba(0, 229, 255, 0.45),
+    inset 0 0 6px rgba(0, 229, 255, 0.1);
+}
+
+.form-control:focus {
+  background-color: #0c0c12 !important;
+  color: #ffffff !important;
+  border-color: #ff00de;
+  outline: none;
+  box-shadow:
+    0 0 12px rgba(255, 0, 222, 0.75),
+    0 0 24px rgba(0, 229, 255, 0.35),
+    inset 0 0 8px rgba(255, 0, 222, 0.2);
+}
+
+.form-control:disabled {
+  background-color: rgba(9, 9, 13, 0.6) !important;
+  color: rgba(0, 229, 255, 0.65) !important;
+  border-color: rgba(0, 229, 255, 0.25);
+  cursor: not-allowed;
+}
+
+/* Alertas Cyberpunk */
+.alert-info {
+  background-color: rgba(0, 229, 255, 0.1);
+  color: #00e5ff;
+  border: 1px solid #00e5ff;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+}
+
+.alert-danger {
+  background-color: rgba(255, 0, 222, 0.12);
+  color: #ff66eb;
+  border: 1px solid #ff00de;
+  text-shadow: 0 0 6px rgba(255, 0, 222, 0.6);
+  box-shadow: 0 0 12px rgba(255, 0, 222, 0.25);
+}
+
+/* Botón primario (.btn-primary) con destello neón en :hover y :focus */
+.btn-primary {
+  background-color: rgba(255, 0, 222, 0.15);
+  color: #ffffff;
+  border: 1px solid #ff00de;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.6rem 1.4rem;
+  text-shadow:
+    0 0 5px #ff00de,
+    0 0 10px rgba(255, 0, 222, 0.7);
+  box-shadow:
+    0 0 10px rgba(255, 0, 222, 0.35),
+    inset 0 0 8px rgba(255, 0, 222, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled),
+.btn-primary:focus:not(:disabled) {
+  background-color: #ff00de;
+  color: #ffffff;
+  border-color: #ff00de;
+  text-shadow:
+    0 0 6px #ffffff,
+    0 0 14px #ff00de;
+  box-shadow:
+    0 0 15px #ff00de,
+    0 0 30px rgba(255, 0, 222, 0.7),
+    0 0 45px rgba(0, 229, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background-color: rgba(255, 0, 222, 0.05);
+  border-color: rgba(255, 0, 222, 0.35);
+  color: rgba(224, 224, 224, 0.5);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* Botón secundario (Cancelar) complementario en cian neón */
+.btn-outline-secondary {
+  color: #00e5ff;
+  border-color: rgba(0, 229, 255, 0.6);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.6rem 1.4rem;
+  text-shadow: 0 0 5px rgba(0, 229, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: rgba(0, 229, 255, 0.15);
+  color: #ffffff;
+  border-color: #00e5ff;
+  text-shadow:
+    0 0 6px #ffffff,
+    0 0 12px #00e5ff;
+  box-shadow:
+    0 0 14px rgba(0, 229, 255, 0.65),
+    inset 0 0 8px rgba(0, 229, 255, 0.25);
+  transform: translateY(-1px);
+}
